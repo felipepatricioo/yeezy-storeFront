@@ -1,0 +1,52 @@
+#cardDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.banner{
+  background-image: url("https://i.ibb.co/zxvkTJD/yeezybanner.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  display:table;
+}
+.banner2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.yeezy-logo{
+    animation-name: slide;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+    transform: translateX(-1000px)
+
+}
+
+@keyframes slide {
+    to {
+        transform: translateX(0px)
+    }
+}
+
+.bannerText {
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    animation-name: slideText2;
+    animation-duration: 4s; 
+    animation-fill-mode: forwards;
+    transform: translateY(-1000px)
+}
+
+@keyframes slideText2 {
+    to {
+        transform: translateY(260px)
+    }
+}
+
