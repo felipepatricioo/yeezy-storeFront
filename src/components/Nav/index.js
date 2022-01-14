@@ -7,17 +7,27 @@ import {
 } from "react-icons/ai";
 
 export default function Nav() {
-  
+
+  const token = localStorage.getItem("token")
+
   return (
     <navbar>
       <div className="navbar">
         <div>
           <ul className="navbar2">
-            <Link to="/login">
-              {
-
-              }
-            </Link>
+          {token ? (
+              <Link to="/profile">
+                <li>
+                  <AiOutlineUser className="user" />
+                </li>
+              </Link>
+            ) : (
+              <Link to="/login">
+                <li>
+                  <AiOutlineUser className="user" />
+                </li>
+              </Link>
+            )}
             <Link to="/cart">
               <li>
                 <AiOutlineShoppingCart className="cart" />
